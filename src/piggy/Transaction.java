@@ -8,6 +8,10 @@ public class Transaction {
     private String description;
     private String category;
     
+    //--------------------------------------------------
+    // Getters and setters
+    //
+    
     String getCategory() {
         return category;
     }
