@@ -9,6 +9,22 @@ public class Transaction {
     private String category;
     
     //--------------------------------------------------
+    // Converters
+    //
+    
+    /** Returns a string representation of the object. */
+    @Override
+    public String toString() {
+        
+        StringBuilder sb = new StringBuilder();
+        
+        sb.append("Transaction");
+        sb.append("date='" + date + "'");
+        sb.append("amount='" + amount + "'");
+        return sb.toString();
+    }
+    
+    //--------------------------------------------------
     // Getters and setters
     //
     
