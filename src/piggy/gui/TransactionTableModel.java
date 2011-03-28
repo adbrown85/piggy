@@ -1,4 +1,4 @@
-package piggy;
+package piggy.gui;
 
 import java.util.ArrayList;
 import java.util.List;

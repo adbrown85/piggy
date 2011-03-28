@@ -1,9 +1,10 @@
-package piggy;
+package piggy.gui;
 
 import java.io.File;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import org.junit.Test;
+import piggy.gui.TransactionPanel;
 
 
 public class TransactionPanelTest {

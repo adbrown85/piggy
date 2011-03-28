@@ -1,4 +1,4 @@
-package piggy;
+package piggy.gui;
 
 import java.io.File;
 import java.io.FileNotFoundException;
