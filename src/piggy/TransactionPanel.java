@@ -2,7 +2,6 @@ package piggy;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -10,7 +9,6 @@ import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.table.AbstractTableModel;
 
 
 /**
@@ -68,65 +66,5 @@ public class TransactionPanel extends Box {
     
     static String getLine(Scanner scanner, int i) {
         return scanner.nextLine().substring(i);
-    }
-}
-
-
-class TransactionTableModel extends AbstractTableModel {
-    
-    private final String[] headers;
-    private final List<Transaction> data;
-    
-    TransactionTableModel() {
-        this.headers = createHeaders();
-        this.data = new ArrayList<Transaction>();
-    }
-    
-    void add(List<Transaction> transactions) {
-        data.addAll(transactions);
-        fireTableDataChanged();
-    }
-    
-    @Override
-    public String getColumnName(int column) {
-        return headers[column];
-    }
-    
-    @Override
-    public int getColumnCount() {
-        return headers.length;
-    }
-    
-    @Override
-    public int getRowCount() {
-        return data.size();
-    }
-    
-    @Override
-    public Object getValueAt(int row, int col) {
-        
-        Transaction t = data.get(row);
-        
-        switch (col) {
-        case 0: return t.getDate();
-        case 1: return t.getAmount();
-        case 2: return t.getCategory();
-        case 3: return t.getDescription();
-        default:
-            throw new RuntimeException("Unexpected  column!");
-        }
-    }
-    
-    //---------------------------------
-    // Helpers
-    //
-    
-    private static String[] createHeaders() {
-        return new String[] {
-                "Date",
-                "Amount",
-                "Category",
-                "Description"
-        };
     }
 }
