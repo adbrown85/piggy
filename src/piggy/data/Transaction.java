@@ -22,8 +22,8 @@ public class Transaction {
         StringBuilder sb = new StringBuilder();
         
         sb.append("Transaction");
-        sb.append("date='" + date + "'");
-        sb.append("amount='" + amount + "'");
+        sb.append(" date='" + date + "'");
+        sb.append(" amount='" + amount + "'");
         return sb.toString();
     }
     
