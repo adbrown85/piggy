@@ -2,23 +2,21 @@ package piggy;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import swing.VerticalBox;
 
 
 /**
  * Panel for holding the transactions.
  */
-public class TransactionPanel extends Box {
+public class TransactionPanel extends VerticalBox {
     
     TransactionTableModel model = new TransactionTableModel();
     JTable table = new JTable(model);
     JScrollPane pane = new JScrollPane(table);
     
     TransactionPanel() {
-        super(BoxLayout.PAGE_AXIS);
         add(pane);
     }
     
