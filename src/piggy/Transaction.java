@@ -1,6 +1,9 @@
 package piggy;
 
 
+/**
+ * Single change to an account.
+ */
 public class Transaction {
     
     private String date;
