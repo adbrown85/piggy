@@ -1,4 +1,4 @@
-package piggy;
+package piggy.data;
 
 
 /**
@@ -31,35 +31,35 @@ public class Transaction {
     // Getters and setters
     //
     
-    String getCategory() {
+    public String getCategory() {
         return category;
     }
     
-    void setCategory(String category) {
+    public void setCategory(String category) {
         this.category = category;
     }
     
-    String getDate() {
+    public String getDate() {
         return date;
     }
     
-    void setDate(String date) {
+    public void setDate(String date) {
         this.date = date;
     }
     
-    String getDescription() {
+    public String getDescription() {
         return description;
     }
     
-    void setDescription(String description) {
+    public void setDescription(String description) {
         this.description = description;
     }
     
-    String getAmount() {
+    public String getAmount() {
         return amount;
     }
     
-    void setAmount(String amount) {
+    public void setAmount(String amount) {
         this.amount = amount;
     }
 }

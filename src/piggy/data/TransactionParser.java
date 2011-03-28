@@ -1,4 +1,4 @@
-package piggy;
+package piggy.data;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,7 +19,8 @@ public class TransactionParser {
      * @return Transactions loaded from file
      * @throws FileNotFoundException if file does not exists
      */
-    static List<Transaction> parse(File file) throws FileNotFoundException {
+    public static List<Transaction> parse(File file)
+                                          throws FileNotFoundException {
         
         List<Transaction> transactions = new ArrayList<Transaction>();
         Scanner scanner = new Scanner(file);

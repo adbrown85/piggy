@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import piggy.data.TransactionParser;
 import swing.VerticalBox;
 
 
