@@ -24,6 +24,7 @@ public class TransactionTable extends JTable {
         super(new TransactionTableModel());
         
         initColumnWidths();
+        setFillsViewportHeight(true);
     }
     
     /**
