@@ -2,6 +2,8 @@ package piggy.gui;
 
 import java.awt.Dimension;
 import java.util.List;
+import javax.swing.DefaultCellEditor;
+import javax.swing.JComboBox;
 import javax.swing.JTable;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
@@ -27,6 +29,8 @@ public class TransactionTable extends JTable {
         super(new TransactionTableModel());
         
         initColumnWidths();
+        initColumnEditors();
+        
         setFillsViewportHeight(true);
         setPreferredScrollableViewportSize(getDefaultViewportSize());
         setAutoResizeMode(AUTO_RESIZE_LAST_COLUMN);
@@ -57,6 +61,19 @@ public class TransactionTable extends JTable {
             tc = tcm.getColumn(i);
             tc.setPreferredWidth(getPreferredColumnWidth(i));
         }
+    }
+    
+    private void initColumnEditors() {
+        
+        TableColumnModel tcm = getColumnModel();
+        TableColumn tc = tcm.getColumn(2);
+        JComboBox cb = new JComboBox();
+        
+        cb.addItem("Income");
+        cb.addItem("Food");
+        cb.addItem("Rent");
+        cb.addItem("Other");
+        tc.setCellEditor(new DefaultCellEditor(cb));
     }
     
     //--------------------------------------------------

@@ -63,6 +63,25 @@ class TransactionTableModel extends AbstractTableModel {
         }
     }
     
+    @Override
+    public boolean isCellEditable(int row, int col) {
+        return (col == 2);
+    }
+    
+    @Override
+    public void setValueAt(Object value, int row, int col) {
+        
+        Transaction transaction = getTransaction(row);
+        
+        switch (col) {
+        case 2:
+            transaction.setCategory((String) value);
+            break;
+        default:
+            break;
+        }
+    }
+    
     //---------------------------------
     // Helpers
     //
@@ -74,5 +93,9 @@ class TransactionTableModel extends AbstractTableModel {
                 "Category",
                 "Description"
         };
+    }
+    
+    private Transaction getTransaction(int row) {
+        return data.get(row);
     }
 }
