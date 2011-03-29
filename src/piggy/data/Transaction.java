@@ -27,6 +27,21 @@ public class Transaction {
         return sb.toString();
     }
     
+    /** Returns a copy of the object. */
+    @Override
+    public Transaction clone() {
+        
+        Transaction copy;
+        
+        try {
+            copy = (Transaction) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException("Unexpected exception in clone!");
+        }
+        
+        return copy;
+    }
+    
     //--------------------------------------------------
     // Getters and setters
     //
