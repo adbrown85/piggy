@@ -60,11 +60,18 @@ public class TransactionParser {
             transaction.setDate(v);
             break;
         case 'T':
-            transaction.setAmount(v);
+            transaction.setAmount(parseDollars(v));
             break;
         case 'P':
             transaction.setDescription(v);
             break;
         }
+    }
+    
+    private static float parseDollars(String str) {
+        
+        String numbers = str.substring(1);
+        
+        return Float.parseFloat(numbers);
     }
 }

@@ -7,7 +7,7 @@ package piggy.data;
 public class Transaction {
     
     private String date;
-    private String amount;
+    private float amount;
     private String description;
     private String category;
     
@@ -55,11 +55,11 @@ public class Transaction {
         this.description = description;
     }
     
-    public String getAmount() {
+    public float getAmount() {
         return amount;
     }
     
-    public void setAmount(String amount) {
+    public void setAmount(float amount) {
         this.amount = amount;
     }
 }
