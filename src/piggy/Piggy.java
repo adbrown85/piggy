@@ -72,7 +72,14 @@ public class Piggy implements Runnable, ActionListener {
     }
     
     private void onSave() {
-        System.err.println("SAVE!");
+        
+        int code = fileChooser.showSaveDialog(transactionPanel);
+        File file;
+        
+        if (code == JFileChooser.APPROVE_OPTION) {
+            file = fileChooser.getSelectedFile();
+            transactionPanel.save(file);
+        }
     }
     
     //------------------------------------------------------------
