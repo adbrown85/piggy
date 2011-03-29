@@ -29,6 +29,7 @@ public class TransactionTable extends JTable {
         initColumnWidths();
         setFillsViewportHeight(true);
         setPreferredScrollableViewportSize(getDefaultViewportSize());
+        setAutoResizeMode(AUTO_RESIZE_LAST_COLUMN);
     }
     
     /**
