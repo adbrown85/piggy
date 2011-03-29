@@ -20,7 +20,7 @@ public class TransactionTable extends JTable {
     /**
      * Adds transactions to the table.
      * 
-     * @param transactions
+     * @param transactions List of transactions to add
      */
     void add(List<Transaction> transactions) {
         getModel().add(transactions);
