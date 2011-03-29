@@ -50,7 +50,7 @@ class TransactionTableModel extends AbstractTableModel {
         case 2: return t.getCategory();
         case 3: return t.getDescription();
         default:
-            throw new RuntimeException("Unexpected  column!");
+            throw new RuntimeException("Unexpected column!");
         }
     }
     
