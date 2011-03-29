@@ -15,11 +15,11 @@ public class TransactionPanel extends VerticalBox {
     TransactionTable table = new TransactionTable();
     JScrollPane pane = new JScrollPane(table);
     
-    TransactionPanel() {
+    public TransactionPanel() {
         add(pane);
     }
     
-    void load(File file) throws FileNotFoundException {
+    public void load(File file) throws FileNotFoundException {
         table.add(TransactionParser.parse(file));
     }
 }
