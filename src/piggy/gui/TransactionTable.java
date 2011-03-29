@@ -10,14 +10,11 @@ import piggy.data.Transaction;
  */
 public class TransactionTable extends JTable {
     
-    private final TransactionTableModel model;
-    
     /**
      * Creates a transaction table.
      */
     TransactionTable() {
         super(new TransactionTableModel());
-        model = (TransactionTableModel) getModel();
     }
     
     /**
@@ -26,6 +23,16 @@ public class TransactionTable extends JTable {
      * @param transactions
      */
     void add(List<Transaction> transactions) {
-        model.add(transactions);
+        getModel().add(transactions);
+    }
+    
+    //--------------------------------------------------
+    // Getters
+    //
+    
+    /** Returns the table's model. */
+    @Override
+    public TransactionTableModel getModel() {
+        return (TransactionTableModel) super.getModel();
     }
 }
