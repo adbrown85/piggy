@@ -15,12 +15,12 @@ import piggy.data.Transaction;
  */
 public class TransactionTable extends JTable {
     
-    private static final int DEFAULT_VIEWPORT_WIDTH = 600;
+    private static final int DEFAULT_VIEWPORT_WIDTH = 800;
     private static final int DEFAULT_VIEWPORT_HEIGHT = 400;
-    private static final int DEFAULT_DATE_WIDTH = 60;
-    private static final int DEFAULT_AMOUNT_WIDTH = 80;
-    private static final int DEFAULT_CATEGORY_WIDTH = 100;
-    private static final int DEFAULT_DESCRIPTION_WIDTH = 360;
+    private static final int DEFAULT_DATE_WIDTH = 50;
+    private static final int DEFAULT_AMOUNT_WIDTH = 70;
+    private static final int DEFAULT_CATEGORY_WIDTH = 80;
+    private static final int DEFAULT_DESCRIPTION_WIDTH = 600;
     
     /**
      * Creates a transaction table.
