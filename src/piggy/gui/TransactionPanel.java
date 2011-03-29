@@ -3,7 +3,6 @@ package piggy.gui;
 import java.io.File;
 import java.io.FileNotFoundException;
 import javax.swing.JScrollPane;
-import javax.swing.JTable;
 import piggy.data.TransactionParser;
 import swing.VerticalBox;
 
@@ -13,8 +12,7 @@ import swing.VerticalBox;
  */
 public class TransactionPanel extends VerticalBox {
     
-    TransactionTableModel model = new TransactionTableModel();
-    JTable table = new JTable(model);
+    TransactionTable table = new TransactionTable();
     JScrollPane pane = new JScrollPane(table);
     
     TransactionPanel() {
@@ -22,6 +20,6 @@ public class TransactionPanel extends VerticalBox {
     }
     
     void load(File file) throws FileNotFoundException {
-        model.add(TransactionParser.parse(file));
+        table.add(TransactionParser.parse(file));
     }
 }
