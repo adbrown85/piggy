@@ -14,7 +14,7 @@ public class MainMenuBar extends JMenuBar implements ActionListener {
     
     private final List<ActionListener> listeners;
     
-    MainMenuBar() {
+    public MainMenuBar() {
         listeners = new ArrayList<ActionListener>();
         addMenu(new FileMenu());
     }
