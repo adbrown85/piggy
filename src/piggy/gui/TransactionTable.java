@@ -69,9 +69,16 @@ public class TransactionTable extends JTable {
         TableColumn tc = tcm.getColumn(2);
         JComboBox cb = new JComboBox();
         
+        cb.addItem("");
         cb.addItem("Income");
         cb.addItem("Food");
+        cb.addItem("Groceries");
+        cb.addItem("Gas");
         cb.addItem("Rent");
+        cb.addItem("Maintenance");
+        cb.addItem("Entertainment");
+        cb.addItem("Credit");
+        cb.addItem("Gifts");
         cb.addItem("Other");
         tc.setCellEditor(new DefaultCellEditor(cb));
     }
