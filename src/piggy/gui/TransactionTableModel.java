@@ -54,6 +54,15 @@ class TransactionTableModel extends AbstractTableModel {
         }
     }
     
+    @Override
+    public Class<?> getColumnClass(int col) {
+        switch (col) {
+        case 1: return Float.class;
+        default:
+            return String.class;
+        }
+    }
+    
     //---------------------------------
     // Helpers
     //
