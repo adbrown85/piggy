@@ -1,5 +1,6 @@
 package piggy.gui;
 
+import java.awt.Dimension;
 import java.util.List;
 import javax.swing.JTable;
 import javax.swing.table.TableColumn;
@@ -12,10 +13,12 @@ import piggy.data.Transaction;
  */
 public class TransactionTable extends JTable {
     
-    private static final int DATE_WIDTH = 20;
-    private static final int AMOUNT_WIDTH = 40;
-    private static final int CATEGORY_WIDTH = 40;
-    private static final int DESCRIPTION_WIDTH = 200;
+    private static final int DEFAULT_VIEWPORT_WIDTH = 600;
+    private static final int DEFAULT_VIEWPORT_HEIGHT = 400;
+    private static final int DEFAULT_DATE_WIDTH = 60;
+    private static final int DEFAULT_AMOUNT_WIDTH = 80;
+    private static final int DEFAULT_CATEGORY_WIDTH = 100;
+    private static final int DEFAULT_DESCRIPTION_WIDTH = 360;
     
     /**
      * Creates a transaction table.
@@ -25,6 +28,7 @@ public class TransactionTable extends JTable {
         
         initColumnWidths();
         setFillsViewportHeight(true);
+        setPreferredScrollableViewportSize(getDefaultViewportSize());
     }
     
     /**
@@ -58,13 +62,18 @@ public class TransactionTable extends JTable {
     // Getters
     //
     
+    /** Returns default size of viewport when added to a scroll pane. */
+    private static Dimension getDefaultViewportSize() {
+        return new Dimension(DEFAULT_VIEWPORT_WIDTH, DEFAULT_VIEWPORT_HEIGHT);
+    }
+    
     /** Returns preferred width for a column. */
     private int getPreferredColumnWidth(int index) {
         switch (index) {
-        case 0: return DATE_WIDTH;
-        case 1: return AMOUNT_WIDTH;
-        case 2: return CATEGORY_WIDTH;
-        case 3: return DESCRIPTION_WIDTH;
+        case 0: return DEFAULT_DATE_WIDTH;
+        case 1: return DEFAULT_AMOUNT_WIDTH;
+        case 2: return DEFAULT_CATEGORY_WIDTH;
+        case 3: return DEFAULT_DESCRIPTION_WIDTH;
         default:
             throw new RuntimeException("Unexpected column index!");
         }
