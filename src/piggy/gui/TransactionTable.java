@@ -45,6 +45,13 @@ public class TransactionTable extends JTable {
         getModel().add(transactions);
     }
     
+    /**
+     * Returns a copy of all the transactions in the table.
+     */
+    public List<Transaction> getTransactions() {
+        return getModel().getTransactions();
+    }
+    
     //--------------------------------------------------
     // Helpers
     //

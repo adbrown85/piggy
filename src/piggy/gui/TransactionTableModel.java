@@ -24,6 +24,20 @@ class TransactionTableModel extends AbstractTableModel {
         fireTableDataChanged();
     }
     
+    /**
+     * Returns a copy of the transactions in the table.
+     */
+    public List<Transaction> getTransactions() {
+        
+        int size = data.size();
+        List<Transaction> copy = new ArrayList<Transaction>(size);
+        
+        for (Transaction t : data) {
+            copy.add(t.clone());
+        }
+        return copy;
+    }
+    
     @Override
     public String getColumnName(int column) {
         return headers[column];
