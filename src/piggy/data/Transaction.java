@@ -4,7 +4,7 @@ package piggy.data;
 /**
  * Single change to an account.
  */
-public class Transaction {
+public class Transaction implements Cloneable {
     
     private String date;
     private float amount;
