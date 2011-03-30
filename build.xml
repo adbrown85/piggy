@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<project name="piggy" default="compile">
+    
+    <!-- Initialization -->
+    <property file="build.properties" />
+    <path id="classpath">
+        <fileset dir="lib" includes="*.jar"/>
+        <pathelement location="${classes.dir}"/>
+    </path>
+    
+    <!-- Cleaning -->
+    <target name="clean">
+        <delete dir="${build.dir}" />
+    </target>
+    
+    <!-- Compiling -->
+    <target name="compile">
+    	<mkdir dir="${classes.dir}" />
+        <javac destdir="${classes.dir}" includeantruntime="no">
+            <src location="${src.dir}" />
+        	<classpath refid="classpath" />
+        	<compilerarg line="${compiler.args}" />
+        </javac>
+    </target>
+</project>
