@@ -15,11 +15,11 @@
     
     <!-- Compiling -->
     <target name="compile">
-    	<mkdir dir="${classes.dir}" />
+        <mkdir dir="${classes.dir}" />
         <javac destdir="${classes.dir}" includeantruntime="no">
             <src location="${src.dir}" />
-        	<classpath refid="classpath" />
-        	<compilerarg line="${compiler.args}" />
+            <classpath refid="classpath" />
+            <compilerarg line="${compiler.args}" />
         </javac>
     </target>
 </project>
