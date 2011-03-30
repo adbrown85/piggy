@@ -2,4 +2,5 @@
 .project
 bin/
 build/
+piggy-*.jar
 

@@ -11,6 +11,7 @@
     <!-- Cleaning -->
     <target name="clean">
         <delete dir="${build.dir}" />
+        <delete file="${jar.file}" />
     </target>
     
     <!-- Compiling -->
@@ -21,5 +22,13 @@
             <classpath refid="classpath" />
             <compilerarg line="${compiler.args}" />
         </javac>
+    </target>
+    
+    <!-- Distribution -->
+    <target name="dist">
+        <jar destfile="${jar.file}"
+             basedir="${classes.dir}"
+             manifest="${manifest.file}" />
+        <chmod file="${jar.file}" perm="755" />
     </target>
 </project>
