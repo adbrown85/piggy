@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="piggy" default="compile">
+<project name="piggy" default="dist">
     
     <!-- Initialization -->
     <property file="build.properties" />
