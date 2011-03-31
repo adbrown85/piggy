@@ -23,6 +23,7 @@ public class TransactionPanel extends VerticalBox {
     }
     
     public void load(File file) throws FileNotFoundException {
+        table.clear();
         table.add(TransactionParser.parse(file));
     }
     

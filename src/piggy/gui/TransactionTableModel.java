@@ -25,6 +25,14 @@ class TransactionTableModel extends AbstractTableModel {
     }
     
     /**
+     * Removes all transactions from the model.
+     */
+    void clear() {
+        data.clear();
+        fireTableDataChanged();
+    }
+    
+    /**
      * Returns a copy of the transactions in the table.
      */
     public List<Transaction> getTransactions() {

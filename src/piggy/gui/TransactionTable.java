@@ -46,6 +46,13 @@ public class TransactionTable extends JTable {
     }
     
     /**
+     * Removes all the transactions in the table.
+     */
+    public void clear() {
+        getModel().clear();
+    }
+    
+    /**
      * Returns a copy of all the transactions in the table.
      */
     public List<Transaction> getTransactions() {
